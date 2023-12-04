@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Video Speed Controller</title>
+    <link rel="stylesheet" type="text/css" href="popup.css" />
+  </head>
+  <body>
+    <h1>QuickPlay</h1>
+    <h2>Current Speed: <span id="currentspeed">1.0</span>x</h2>
+    <form id="customspeed">
+      <span>
+        <input id="speed" name="speed" type="number" step="0.05" />
+        <button type="submit">Change Speed</button>
+      </span>
+    </form>
+    <div class="button-container">
+      <button id="decrement-0.25">--</button>
+      <button id="decrement-0.1">-</button>
+      <button id="reset">1x</button>
+      <button id="increment-0.1">+</button>
+      <button id="increment-0.25">++</button>
+    </div>
+    <div class="misc-info">
+      <div>Minimum Step: 0.05x</div>
+      <div>Alt + Q: Open/Close Extension Window</div>
+      <div>Alt + 1: Reset to 1x Speed</div>
+      <div>Alt + &#8593;/&#8595;: Increase/Decrease speed by 0.25x</div>
+    </div>
+    <script src="utils.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

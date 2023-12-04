@@ -1,0 +1,56 @@
+{
+    "name": "QuickPlay",
+    "version": "1.0",
+    "manifest_version": 3,
+    "description": "Change the speed of video players.",
+    "icons": {
+      "16": "images/favicon-16x16.png",
+      "32": "images/favicon-32x32.png",
+      "48": "images/favicon-48x48.png",
+      "64": "images/favicon-64x64.png",
+      "128": "images/favicon-128x128.png"
+    },
+    "host_permissions": [
+      "<all_urls>"
+    ],
+    "permissions": [
+      "storage",
+      "scripting"
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "commands": {
+      "_execute_action": {
+        "suggested_key": {
+          "default": "Alt+Q",
+          "mac": "Alt+Q"
+        },
+        "description" : "Start extension"
+      },
+      "reset-speed": {
+        "suggested_key": {
+          "default": "Alt+1",
+          "mac": "Alt+1"
+        },
+        "description" : "Return speed to 1x"
+      },
+      "increase-speed": {
+        "suggested_key": {
+          "default": "Alt+Up",
+          "mac": "Alt+Up"
+        },
+        "description": "Increase video speed by 0.25"
+      },
+      "decrease-speed": {
+        "suggested_key": {
+          "default": "Alt+Down",
+          "mac": "Alt+Down"
+        },
+        "description": "Decrease video speed by 0.25"
+      }
+    }
+  }
